@@ -18,6 +18,8 @@
 - Add items to `qb-core > shared > items.lua`
 - Add images to `yourInventory > html > images`
 - Choose which minigame to use in the config. `Config.Minigame`
+	- PS-UI: https://github.com/Project-Sloth/ps-ui
+	- QB-Lock: https://github.com/Nathan-FiveM/qb-lock
 ```
 	-- Funkopop Toys
 	['funkopop_harrypotter']		= {['name'] = 'funkopop_harrypotter',	['label'] = 'Harry Potter Funkopop',		['weight'] = 0,		['type'] = 'item',		['image'] = 'funkopop_harrypotter.png',		['unique'] = false,		['useable'] = false,		['shouldClose'] = false,	['combinable'] = nil,	['description'] = 'Harry Potter Funkopop Toy'},
