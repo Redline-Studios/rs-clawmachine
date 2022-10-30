@@ -11,8 +11,8 @@
 - Use qb-target or drawtext
 - Ability to add funds to a business when players use the claw machines
 
-# Credits
-- Original Script: https://github.com/Demo4889/qb-clawmachine
+# Preview
+https://streamable.com/ekfqjn
 
 # Installation
 - Add items to `qb-core > shared > items.lua`
@@ -33,3 +33,6 @@
 	['funkopop_voldemort']			= {['name'] = 'funkopop_voldemort',		['label'] = 'Voldemort Funkopop',			['weight'] = 0,		['type'] = 'item',		['image'] = 'funkopop_voldemort.png',		['unique'] = false,		['useable'] = false,		['shouldClose'] = false,	['combinable'] = nil,	['description'] = 'Voldemort Funkopop Toy'},
 	['funkopop_snape']				= {['name'] = 'funkopop_snape',			['label'] = 'Severus Snape Funkopop',		['weight'] = 0,		['type'] = 'item',		['image'] = 'funkopop_snape.png',			['unique'] = false,		['useable'] = false,		['shouldClose'] = false,	['combinable'] = nil,	['description'] = 'Severus Snape Funkopop Toy'},
 ```
+
+# Credits
+- Original Script: https://github.com/Demo4889/qb-clawmachine
