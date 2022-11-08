@@ -1,5 +1,8 @@
-# rs-clawmachine
 ![Redline Studios Banner](https://i.imgur.com/VFEXnGd.png)
+# Redline Studios Discord:
+https://discord.gg/RCU9XEvnsE
+
+# rs-clawmachine
 - Fun claw machine resource for QB-Core
 - Random tier winnings (Set in Config)
 	- Low
