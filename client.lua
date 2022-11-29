@@ -125,8 +125,8 @@ local function ClawMachines()
                 Wait(2)
             end
             machines[k] = CreateObject(`ch_prop_arcade_claw_01a`, v.x, v.y, v.z - 1, false, false, false)
-            SetEntityHeading(machines[#machines], v.w - 180)
-            FreezeEntityPosition(machines[#machines], true)
+            SetEntityHeading(machines[k], v.w - 180)
+            FreezeEntityPosition(machines[k], true)
             exports['qb-target']:AddTargetEntity(machines[k], {
                 options = {
                     {
