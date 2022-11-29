@@ -33,6 +33,14 @@ Config.OwnedBusiness = {
     business = 'cyber' -- Set this to the job name of the business if enabled = true
 }
 
+-- SPAWN CLAW MACHINES --
+Config.SpawnMachines = {
+    enable = true,
+    locations = {
+        [1] = vector4(299.60, -587.26, 43.28, 249.83)
+    }
+}
+
 -- PRIZES CONFIG --
 Config.Prizes = {
     Low = { -- Low Tier Prizes

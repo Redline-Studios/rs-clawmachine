@@ -1,11 +1,18 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 local ClawMachineTargets = false
 local isPlaying = false
+local machines = {}
 
 local function RemoveClawMachines()
     if ClawMachineTargets then
         exports['qb-target']:RemoveTargetModel(Config.Machines)
         ClawMachineTargets = false
+    end
+
+    if Config.SpawnMachines.enable then
+        for k,v in pairs(machines) do
+            DeleteObject(machines[k])
+        end
     end
 end
 
@@ -110,8 +117,32 @@ local function ClawMachines()
             end
         end)
     end
-end
 
+    if Config.SpawnMachines.enable then
+        for k, v in pairs(Config.SpawnMachines.locations) do
+            RequestModel(`ch_prop_arcade_claw_01a`)
+            while not HasModelLoaded(`ch_prop_arcade_claw_01a`) do
+                Wait(2)
+            end
+            machines[k] = CreateObject(`ch_prop_arcade_claw_01a`, v.x, v.y, v.z - 1, false, false, false)
+            SetEntityHeading(machines[#machines], v.w - 180)
+            FreezeEntityPosition(machines[#machines], true)
+            exports['qb-target']:AddTargetEntity(machines[k], {
+                options = {
+                    {
+                        icon = 'fas fa-coins',
+                        label = 'Claw Machine: $'..Config.Price,
+                        targeticon = 'fas fa-coins',
+                        action = function()
+                            StartClawMachine()
+                        end,
+                    }
+                },
+                distance = 2.0
+            })
+        end
+    end
+end
 
 ---------------------------------------------------------------
 --------------- CREATE / REMOVE TARGET ENTITY -----------------
